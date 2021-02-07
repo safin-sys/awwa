@@ -1,11 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `AWWA`,
+    description: `Click Here Previous Next OUR MISSION To empower the disadvantaged to maximise their potential to lead dignified and independent lives. ABOUT AWWA AWWA is a social service agency, which serves persons of different demographics across life-stages yearly. Services include early intervention for pre-schoolers, education and disability support for children and adults with additional needs, assistance to […]`,
+    author: `Safin Ahmed`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -18,7 +19,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
+        name: `AWWA`,
         short_name: `starter`,
         start_url: `/`,
         background_color: `#663399`,
