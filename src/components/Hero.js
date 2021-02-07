@@ -1,91 +1,106 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import heroimg from '../images/hero/hero.png'
 import kids from '../images/hero/kids.jpg'
 import seniors from '../images/hero/seniors.jpg'
 import teens from '../images/hero/teens.jpg'
 
-const HeroContainer = styled.section`
-    display: flex;
-    justify-content: center;
-    .cta {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 24px;
-        margin: 120px auto;
-        z-index: 1;
-        h1 {
-            text-align: center;
-            font-size: 42px;
-            color: #005B4A;
-            span {
-                text-decoration: underline;
-                text-decoration-color: #F18565;
-            }
-        }
-        .cta-btn {
-            padding: 8px 20px;
-            background-color: #F18565;
-            border: none;
-            color: white;
-            text-transform: uppercase;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-    }
-    .image {
-        position: absolute;
-        width: ${window.innerWidth >= 1920 ? '70%' : '85%'};
-        img {
-            width: 100%;
-        }
-    }
-    .mobile-images {
-        display: none;
-        position: absolute;
-        width: 100%;
-        height: calc(100vh - 100px);
-        left: 0;
-        transition: all 2s ease;
-        img {
-            animation: 20s fade infinite;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-        }
-        img:nth-child(2) {
-            animation-delay: -7s;
-        }
-        img:nth-child(3) {
-            animation-delay: -14s;
-        }
-        @keyframes fade {
-            0% {opacity: 0;}
-            20% {opacity: 1;}
-            33% {opacity: 1;}
-            53% {opacity: 0;}
-            100% {opacity: 0;}
-        }
-    }
-    @media (max-width: 768px) {
-        .cta {
-            margin: 70px auto;
-        }
-        .image {
-            display: none;
-        }
-        .mobile-images {
-            display: block;
-        }
-    }
-`;
 
 const Hero = () => {
+    const [width, setWidth] = useState('70%');
+    const HeroContainer = styled.section`
+        display: flex;
+        justify-content: center;
+        .cta {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+            margin: 120px auto;
+            z-index: 1;
+            h1 {
+                text-align: center;
+                font-size: 42px;
+                color: #005B4A;
+                span {
+                    text-decoration: underline;
+                    text-decoration-color: #F18565;
+                }
+            }
+            .cta-btn {
+                padding: 8px 20px;
+                background-color: #F18565;
+                border: none;
+                color: white;
+                text-transform: uppercase;
+                border-radius: 6px;
+                cursor: pointer;
+            }
+        }
+        .image {
+            position: absolute;
+            width: ${width};
+            img {
+                width: 100%;
+            }
+        }
+        .mobile-images {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: calc(90vh - 100px);
+            left: 0;
+            transition: all 2s ease;
+            overflow: hidden;
+            img {
+                animation: 20s fade infinite;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+            img:nth-child(2) {
+                animation-delay: -7s;
+            }
+            img:nth-child(3) {
+                animation-delay: -14s;
+            }
+            @keyframes fade {
+                0% {
+                    opacity: 0;
+                    transform: scale(1);
+                }
+                20% {opacity: 1;}
+                33% {opacity: 1;}
+                53% {opacity: 0;}
+                100% {
+                    opacity: 0;
+                    transform: scale(1.2);
+                }
+            }
+        }
+        @media (max-width: 768px) {
+            .cta {
+                margin: 70px auto;
+            }
+            .image {
+                display: none;
+            }
+            .mobile-images {
+                display: block;
+            }
+        }
+    `;
     const mobileImages = useRef();
-    setTimeout(() => {
-        mobileImages.current.style.opacity = '0';
-    }, 20000)
+    
+    useEffect(() => {
+        setWidth(window.innerWidth >= 1920 ? '70%' : '85%');
+    }, [])
+
+    useEffect(() => {
+        setTimeout(() => {
+            mobileImages.current.style.opacity = '0';
+        }, 20000)
+    }, [])
     return (
         <HeroContainer>
             <section className="cta">

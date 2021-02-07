@@ -70,6 +70,7 @@ const NavContainer = styled.header`
         box-shadow: -10px 0px 30px -25px rgba(0,0,0,0.5);
         transform: translateX(110%);
         transition: all .2s ease-in-out;
+        z-index: 2;
         .nav-links {
             display: flex;
             align-items: center;
@@ -114,8 +115,6 @@ const NavContainer = styled.header`
         }
         .menu-btn {
             display: block;
-        }
-        .mobile-nav {
         }
     }
 `;
