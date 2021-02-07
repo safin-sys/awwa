@@ -10,14 +10,14 @@ const NavContainer = styled.header`
     justify-content: space-between;
     align-items: center;
     nav {
-        height: 64px;
+        height: 100px;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
         .logo {
             img {
-                height: 50px;
+                height: 60px;
             }
         }
         .nav-links {
