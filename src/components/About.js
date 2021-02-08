@@ -44,7 +44,7 @@ const AboutContainer = styled.section`
         position: absolute;
         left: 0;
         width: 100%;
-        margin: 0;
+        margin: 15vh 0;
         .img-container {
             display: none;
         }

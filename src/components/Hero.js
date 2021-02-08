@@ -46,7 +46,7 @@ const HeroContainer = styled.section`
         display: none;
         position: absolute;
         width: 100%;
-        height: calc(90vh - 100px);
+        height: calc(80vh - 100px);
         left: 0;
         transition: all 2s ease;
         overflow: hidden;
@@ -54,7 +54,7 @@ const HeroContainer = styled.section`
             animation: 20s fade infinite;
             position: absolute;
             width: 100%;
-            height: 100%;
+            min-height: 100%;
         }
         img:nth-child(2) {
             animation-delay: -7s;
@@ -84,7 +84,8 @@ const HeroContainer = styled.section`
             display: none;
         }
         .mobile-images {
-            display: block;
+            display: grid;
+            place-items: center;
         }
     }
 `;
@@ -92,7 +93,7 @@ const HeroContainer = styled.section`
 const Spacer = styled.div`
     height: 440px;
     @media (max-width: 768px) {
-        height: 50px;
+        height: 0;
     }
     @media (min-width: 1920px) {
         height: 600px;
