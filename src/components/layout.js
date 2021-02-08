@@ -10,6 +10,9 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-family: 'open sans', sans-serif;
   }
+  body {
+    background-color: #FAF6F2;
+  }
   .container {
     width: 85%;
     margin: 0 auto;

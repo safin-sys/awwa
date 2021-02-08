@@ -89,6 +89,16 @@ const HeroContainer = styled.section`
     }
 `;
 
+const Spacer = styled.div`
+    height: 440px;
+    @media (max-width: 768px) {
+        height: 50px;
+    }
+    @media (min-width: 1920px) {
+        height: 600px;
+    }
+`;
+
 const Hero = () => {
     const mobileImages = useRef();
     
@@ -99,20 +109,23 @@ const Hero = () => {
     }, [])
 
     return (
-        <HeroContainer>
-            <section className="cta">
-                <h1>Uplift and empower <br/> the <span>community</span> <br/> one person at a time.</h1>
-                <button className="cta-btn">Make a difference</button>
-            </section>
-            <section className="image">
-                <img src={heroimg} alt="Hero"/>
-            </section>
-            <section className="mobile-images" ref={mobileImages}>
-                <img src={kids} alt="Kids"/>
-                <img src={teens} alt="Teens playing"/>
-                <img src={seniors} alt="Seniors chilling"/>
-            </section>
-        </HeroContainer>
+        <>
+            <HeroContainer>
+                <section className="cta">
+                    <h1>Uplift and empower <br/> the <span>community</span> <br/> one person at a time.</h1>
+                    <button className="cta-btn">Make a difference</button>
+                </section>
+                <section className="image">
+                    <img src={heroimg} alt="Hero"/>
+                </section>
+                <section className="mobile-images" ref={mobileImages}>
+                    <img src={kids} alt="Kids"/>
+                    <img src={teens} alt="Teens playing"/>
+                    <img src={seniors} alt="Seniors chilling"/>
+                </section>
+            </HeroContainer>
+            <Spacer className="spacer"></Spacer>
+        </>
     )
 }
 

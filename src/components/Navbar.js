@@ -78,6 +78,7 @@ const NavContainer = styled.header`
             flex-direction: column;
             list-style: none;
             height: 90%;
+            margin-top: 40px;
             li {
                 a {
                     text-transform: uppercase;
@@ -100,7 +101,7 @@ const NavContainer = styled.header`
             display: block;
             position: absolute;
             right: 11%;
-            top: 16px;
+            top: 32px;
             z-index: 1;
         }
     }
