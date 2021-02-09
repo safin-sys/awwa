@@ -25,7 +25,7 @@ const AboutContainer = styled.section`
         }
         p {
             margin: 24px 0 64px 0;
-            font-weight: bold;
+            font-weight: 600;
             max-width: 69ch;
         }
         a {
@@ -41,7 +41,6 @@ const AboutContainer = styled.section`
     }
     @media (max-width: 768px) {
         flex-direction: column-reverse;
-        position: absolute;
         left: 0;
         width: 100%;
         margin: 15vh 0;

@@ -1,7 +1,11 @@
 import React from "react"
 import Navbar from './Navbar'
 import { createGlobalStyle } from 'styled-components'
-import '@fontsource/open-sans'
+import '@fontsource/open-sans/300.css'
+import '@fontsource/open-sans/400.css'
+import '@fontsource/open-sans/600.css'
+import '@fontsource/open-sans/700.css'
+import '@fontsource/open-sans/800.css'
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -14,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
     background-color: #FAF6F2;
   }
   .container {
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
   }
 `;

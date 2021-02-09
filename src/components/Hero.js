@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
-import heroimg from '../images/hero/hero.png'
-import kids from '../images/hero/kids.jpg'
-import seniors from '../images/hero/seniors.jpg'
-import teens from '../images/hero/teens.jpg'
+import heroimg from '../images/hero.png'
+import kids from '../images/kids.jpg'
+import seniors from '../images/seniors.jpg'
+import teens from '../images/teens.jpg'
 
 const HeroContainer = styled.section`
     display: flex;
