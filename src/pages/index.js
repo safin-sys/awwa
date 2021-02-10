@@ -1,5 +1,6 @@
 import React from "react"
 import About from "../components/About"
+import Brands from "../components/Brands"
 import DonationGoal from "../components/DonationGoal"
 import Footer from "../components/Footer"
 import Hero from "../components/Hero"
@@ -17,6 +18,7 @@ const IndexPage = () => (
       <HowWeHelp />
       <DonationGoal />
       <div className="space" style={{height: '400px'}}></div>
+      <Brands />
     </Layout>
     <Footer />
   </>

@@ -1,9 +1,6 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import heroimg from '../images/hero.png'
-import kids from '../images/kids.jpg'
-import seniors from '../images/seniors.jpg'
-import teens from '../images/teens.jpg'
 
 const HeroContainer = styled.section`
     display: flex;
@@ -42,50 +39,12 @@ const HeroContainer = styled.section`
             width: 100%;
         }
     }
-    .mobile-images {
-        display: none;
-        position: absolute;
-        width: 100%;
-        height: calc(80vh - 100px);
-        left: 0;
-        transition: all 2s ease;
-        overflow: hidden;
-        img {
-            animation: 20s fade infinite;
-            position: absolute;
-            width: 100%;
-            min-height: 100%;
-        }
-        img:nth-child(2) {
-            animation-delay: -7s;
-        }
-        img:nth-child(3) {
-            animation-delay: -14s;
-        }
-        @keyframes fade {
-            0% {
-                opacity: 0;
-                transform: scale(1);
-            }
-            20% {opacity: 1;}
-            33% {opacity: 1;}
-            53% {opacity: 0;}
-            100% {
-                opacity: 0;
-                transform: scale(1.2);
-            }
-        }
-    }
     @media (max-width: 768px) {
         .cta {
             margin: 70px auto;
         }
         .image {
             display: none;
-        }
-        .mobile-images {
-            display: grid;
-            place-items: center;
         }
     }
 `;
@@ -101,14 +60,6 @@ const Spacer = styled.div`
 `;
 
 const Hero = () => {
-    const mobileImages = useRef();
-    
-    useEffect(() => {
-        setTimeout(() => {
-            mobileImages.current.style.opacity = '0';
-        }, 20000)
-    }, [])
-
     return (
         <>
             <HeroContainer>
@@ -118,11 +69,6 @@ const Hero = () => {
                 </section>
                 <section className="image">
                     <img src={heroimg} alt="Hero"/>
-                </section>
-                <section className="mobile-images" ref={mobileImages}>
-                    <img src={kids} alt="Kids"/>
-                    <img src={teens} alt="Teens playing"/>
-                    <img src={seniors} alt="Seniors chilling"/>
                 </section>
             </HeroContainer>
             <Spacer className="spacer"></Spacer>

@@ -43,7 +43,7 @@ const AboutContainer = styled.section`
         flex-direction: column-reverse;
         left: 0;
         width: 100%;
-        margin: 15vh 0;
+        margin: 80px 0;
         .img-container {
             display: none;
         }
