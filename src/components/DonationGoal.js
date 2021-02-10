@@ -64,6 +64,14 @@ const GoalContainer = styled.div`
         cursor: pointer;
         text-decoration: none;
     }
+    @media (max-width: 768px) {
+        .progress {
+            .bar-bg,
+            .details {
+                width: 80vw;
+            }
+        }
+    }
 `;
 
 const DonationGoal = () => {
