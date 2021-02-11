@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import kids from '../images/kids.jpg'
-import bike from '../images/bike.jpg'
-import teens from '../images/teens.jpg'
+import kids from '../../images/kids.jpg'
+import bike from '../../images/bike.jpg'
+import teens from '../../images/teens.jpg'
 
 const HelpContainer = styled.section`
     display: flex;
@@ -71,7 +71,7 @@ const CardContainer = styled.div`
             display: grid;
             place-content: center;
             img {
-                width: 100%;
+                height: 350px;
             }
         }
         .details-container {

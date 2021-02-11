@@ -128,7 +128,7 @@ const Navbar = () => {
     }
 
     return (
-        <NavContainer>
+        <NavContainer className="container">
             <nav>
                 <Link className="logo" to="/"><img src={logo} alt="AWWA logo"/></Link>
                 <ul className="nav-links">

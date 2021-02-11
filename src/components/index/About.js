@@ -1,7 +1,7 @@
 import { Link } from 'gatsby';
 import React from 'react'
 import styled from 'styled-components'
-import kayak from '../images/kayak.jpeg'
+import kayak from '../../images/kayak.jpeg'
 
 const AboutContainer = styled.section`
     display: flex;

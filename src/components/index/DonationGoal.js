@@ -5,6 +5,7 @@ const GoalContainer = styled.div`
     display: grid;
     place-items: center;
     text-align: center;
+    margin-bottom: 100px;
     h1 {
         color: #005B4A;
     }

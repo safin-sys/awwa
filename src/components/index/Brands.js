@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import ncss from '../images/brands/ncss.webp'
-import carf from '../images/brands/carf.png'
-import spark from '../images/brands/spark.webp'
-import cta from '../images/brands/CTA2019.webp'
+import ncss from '../../images/brands/ncss.webp'
+import carf from '../../images/brands/carf.png'
+import spark from '../../images/brands/spark.webp'
+import cta from '../../images/brands/CTA2019.webp'
 
 const BrandsContainer = styled.section`
     display: flex;

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import heroimg from '../images/hero.png'
+import heroimg from '../../images/hero.png'
 
 const HeroContainer = styled.section`
     display: flex;
