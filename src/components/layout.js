@@ -1,6 +1,6 @@
 import React from "react"
 import Navbar from './Navbar'
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 import '@fontsource/open-sans/300.css'
 import '@fontsource/open-sans/400.css'
 import '@fontsource/open-sans/600.css'
@@ -31,8 +31,39 @@ const Layout = ({ children }) => {
       <Navbar />
       <main>{children}</main>
       <Footer />
+      <Watermark />
     </>
   )
 }
 
 export default Layout
+
+const WaterCon = styled.div`
+  background-color: black;
+  .container {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20px;
+    p{
+      font-family: monospace;
+      font-size: 12px;
+      a {
+        font-family: monospace;
+        color: white;
+      }
+    }
+  }
+`;
+
+const Watermark = () => {
+  return(
+    <WaterCon>
+      <div className="container">
+        <p>Coded by <a href="https://github.com/safin-sys" target="_blank">Safin Ahmed</a></p>
+        <p>Designed by <a href="https://www.thrivelystudio.com/" target="_blank">Nadirah Khaliq</a></p>
+      </div>
+    </WaterCon>
+  )
+}
