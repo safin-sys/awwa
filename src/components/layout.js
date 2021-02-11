@@ -61,8 +61,8 @@ const Watermark = () => {
   return(
     <WaterCon>
       <div className="container">
-        <p>Coded by <a href="https://github.com/safin-sys" target="_blank">Safin Ahmed</a></p>
-        <p>Designed by <a href="https://www.thrivelystudio.com/" target="_blank">Nadirah Khaliq</a></p>
+        <p>Coded by <a href="https://github.com/safin-sys" target="_blank" rel="noreferrer">Safin Ahmed</a></p>
+        <p>Designed by <a href="https://www.thrivelystudio.com/" target="_blank" rel="noreferrer">Nadirah Khaliq</a></p>
       </div>
     </WaterCon>
   )
