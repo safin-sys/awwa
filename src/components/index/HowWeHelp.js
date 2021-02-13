@@ -97,6 +97,18 @@ const CardContainer = styled.div`
     @media (max-width: 768px) {
         flex-direction: column;
     }
+    @media (max-width: 380px) {
+        .card {
+            width: 300px;
+            .img-container {
+                width: 300px;
+                height: 300px;
+                img {
+                    height: 300px;
+                }
+            }
+        }
+    }
 `;
 
 const Card = ({ card }) => {

@@ -43,9 +43,10 @@ const WaterCon = styled.div`
   .container {
     color: white;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    height: 20px;
+    min-height: 20px;
     p{
       font-family: monospace;
       font-size: 12px;

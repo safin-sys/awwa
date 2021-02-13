@@ -21,7 +21,7 @@ const GoalContainer = styled.div`
     .progress {
         h1 {
             color: #F18565;
-            font-size: 200px;
+            font-size: 180px;
             font-weight: 800;
             line-height: 220px;
         }
